@@ -15,4 +15,4 @@ def scatter_linregress(ax, x, y, title, xlabel="", ylabel="", regress=True):
         # linear regression and plot
         (slope, intercept, rvalue, pvalue, stderr) = linregress(x, y)
         ax.plot(x, intercept + slope * x, 'r', label='fitted line')
-        ax.annotate(f"y = {round(slope, 2)} * x + {round(intercept, 2)}",(x.min(),y.min()),fontsize=15,color="red")
+        ax.annotate(f"y = {round(slope, 2)} * x + {round(intercept, 2)}\nR squared: {round(rvalue**2, 2)}",(x.min(),y.min()),fontsize=15,color="red")
